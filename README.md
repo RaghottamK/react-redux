@@ -42,6 +42,12 @@ ESLint: Check our code for minor issue and finds common typos and syntax erros a
     3. Hooks must be declared at the top level. 
         - Dont wrap in hooks in if statement, loops,or nested funcs.
         - React puts hooks into an array and tracks the order of our hooks called.
+    
+  propTypes: Allows you to document what kind of data your component accepts.
+  You can specify the dataTypes (lke Object, func, string, Number or boolean) and isRequired to tell whether its a mandatory prop.
+  Like validation.
+  Note: For performance, propTypes only run in development mode, so u can think this as more of a way to document your expectation and catch issues during development.
+  Note: For optional props, you may find useful to use defaultProps.
 
 ## React Component Life Cycle
 
@@ -105,3 +111,5 @@ ESLint: Check our code for minor issue and finds common typos and syntax erros a
 
 ## Useful terms
   dependency array
+
+
