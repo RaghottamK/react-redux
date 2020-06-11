@@ -66,3 +66,13 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+It is important to place most specific route on top of the less specific route
+
+
+##controlled components
+    Any <input> with a value set is a controlled component
+    Elements value always matches the value of the assigned prop
+
+    If the input doesnt have the a value prop set, its uncontrolled.

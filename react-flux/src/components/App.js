@@ -29,7 +29,7 @@ function App() {
     <div className="container-fluid">
       <ToastContainer autoClose={3000} hideProgressBar/>
       <Header />
-      <Switch>
+      
         <Route path="/" exact component={HomePage} />
         <Route path="/about" component={AboutPage} />
         <Route
@@ -40,11 +40,16 @@ function App() {
           path="/coursesFunctionComponent"
           component={CoursesPageFunctionComponent}
         />
+        {/* note:
+          It is important to place most specific route on top then less specific route
+          As below: if u place "/course" route on top of "/course/:slug" 
+          then "course/:slug" may never match.
+        */}
         <Route path="/course/:slug" component={ManageCoursePage} />
         <Route path="/course" component={ManageCoursePage} />
         <Redirect from="/about-page" to="/about"></Redirect>
         <Route component={PageNotFound}></Route>
-      </Switch>
+     
     </div>
   );
 }
